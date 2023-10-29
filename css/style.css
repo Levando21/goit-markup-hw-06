@@ -1,9 +1,21 @@
 body {
     font-family: "Roboto", sans-serif;
     background-color: #ffffff;
-    color: #434455;
+    color: hsl(237, 12%, 30%);
   }
+
   
+  h1, h2, h3 {
+    text-align: center;
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+
   p,
   h1,
   h2,
@@ -332,10 +344,7 @@ body {
 .point-name {
     display: flex;
     width: 288px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 8px;
+   
 }
 
 .point-strategy {
@@ -805,7 +814,12 @@ body {
     .open-it {
         display: none;
     }
+    .open-mob-menu{
 
+        display:none;
+        overflow: hidden;
+
+    }
     .header-start > .container {
         padding: 0 16px;
     }
@@ -989,6 +1003,7 @@ body {
         gap: 40px;
     }
 
+   
     .clue.links{
         padding: 24px 0;
         font-size: 16px;
@@ -998,6 +1013,14 @@ body {
        font-weight: 400;
    
     }
+
+    .open-mob-menu{
+
+        display:none;
+        overflow: hidden;
+
+    }
+
 
     .main-section {
         max-width: 1440px;
