@@ -61,9 +61,12 @@ body {
   .social-media-list{
     display: flex;
     justify-content: center;
+    gap:16px;
   }
 
-  .icon-icon {
+  .icons-web-list,
+  .icon-icon,
+  .social-media-punkt {
     width: 40px;
     height: 40px;
   }
@@ -108,6 +111,15 @@ body {
     display: flex;
     align-items: center;
   }
+
+  .info,
+  .links{
+
+    display:none;
+
+  }
+
+
   
   .pedro-pablo {
     color: #4d5ae5;
@@ -247,7 +259,8 @@ body {
 
   /* =============== hero ================= */
 
-  .main-section {
+
+.main-section {
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)) , url(../images/people-office-mob.jpg);
     background-repeat: no-repeat;
@@ -317,6 +330,11 @@ body {
 }
 
 .point-name {
+    display: flex;
+    width: 288px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     margin-bottom: 8px;
 }
 
@@ -338,6 +356,7 @@ body {
 
 .team{
     margin-bottom: 72px;
+    text-align: center;
 }
 
 .liudi {
@@ -361,6 +380,7 @@ body {
 }
 
 .name-bame{
+    text-align: center;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -368,7 +388,7 @@ body {
     margin-bottom: 8px;
 }
 
-.{
+.stelle{
     text-align: center;
     font-size: 16px;
     line-height: 1.5;
@@ -584,7 +604,7 @@ body {
 
 /** --------------------- MODAL -------------------------- */
 
-.blackdrop {
+.modal-window {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -596,7 +616,7 @@ body {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal {
+.modal-box {
     width: 288px;
     min-height: 623px;
     border-radius: 4px;
@@ -610,7 +630,7 @@ body {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.x-close {
+.close-button {
     background-color: #E7E9FC;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.10);
@@ -627,21 +647,21 @@ body {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.x-close-icon {
+.close-button-picture {
     fill: #2E2F42;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.x-close:hover, .x-close:focus {
+.close-button:hover, .close-button:focus {
     background-color: #404BBF;
     border: none;
 }
 
-.x-close:hover .x-close-icon, .x-close:focus .x-close-icon {
+.close-button:hover .close-button-picture, .close-button:focus .close-button-picture {
     fill: #FFFFFF;
 }
 
-.modal-title {
+.modal-box-paragraph {
     color: #2E2F42;
     text-align: center;
     font-size: 16px;
@@ -651,11 +671,11 @@ body {
     margin-bottom: 16px;
 }
 
-.modal-field {
+.form-box-modal {
     margin-bottom: 8px;
 }
 
-.label {
+.modal-form-label {
     color: #8E8F99;
     font-size: 12px;
     line-height: 1.17;
@@ -664,7 +684,7 @@ body {
     margin-bottom: 4px;
 }
 
-.modal-input-wrap {
+.input-container {
     position: relative;
 }
 
@@ -681,16 +701,16 @@ body {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus, .modal-input:hover {
+.modal-box-input:focus, .modal-box-input:hover {
     border-color: #4D5AE5;
     color: #000000;
 }
 
-.modal-input:focus + .modal-icon, .modal-input:hover+.modal-icon {
+.modal-box-input:focus + .modal-box-pictures, .modal-box-input:hover+.modal-box-pictures {
     fill: #4D5AE5;
 }
 
-.modal-icon {
+.modal-box-pictures{
     position: absolute;
     left: 16px;
     top: 50%;
@@ -699,7 +719,7 @@ body {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-field-comment {
+.form-box-comment {
     margin-bottom: 16px;
 }
 
@@ -719,35 +739,35 @@ body {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-area:focus,
-.modal-area:hover {
+.second-text:focus,
+.second-text:hover {
     border-color: #4D5AE5;
 }
 
-.modal-area::placeholder {
+.social-media-punkt::placeholder {
     color: rgba(46, 47, 66, 0.40);
     font-size: 12px;
 }
 
-.accept-field {
+.checkbox-container {
     margin-bottom: 24px;
 }
 
-.accept-text {
+.checkbox-label{
     color: #8E8F99;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
 }
 
-.accept-text a {
+.checkbox-label a {
     color: #4D5AE5;
     text-decoration: underline;
     margin-left: 25px;
     /* margin-left: 3px; */
 }
 
-.accept-text span {
+.checkbox-label span {
     width: 16px;
     height: 16px;
     margin-right: 8px;
@@ -757,16 +777,16 @@ body {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.user-privacy-text {
+.span-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-.accept-input:checked + .accept-text span{
-background-color: #404BBF;
-border: none;
-fill: #F4F4FD;
+.radio-button:checked + .checkbox-label span{
+    background-color: #404BBF;
+    border: none;
+    fill: #F4F4FD;
 }
 
 .is-open {
@@ -964,16 +984,19 @@ fill: #F4F4FD;
         margin-right: 76px;
     }
 
-    .header-address-menu {
+    .links-list {
         flex-direction: row;
         gap: 40px;
     }
 
-    .header-address-link {
+    .clue.links{
         padding: 24px 0;
         font-size: 16px;
         line-height: 1.5;
-        letter-spacing: 0.02em;        
+        letter-spacing: 0.02em;  
+        font-family: Roboto;
+       font-weight: 400;
+   
     }
 
     .main-section {
@@ -1066,6 +1089,9 @@ fill: #F4F4FD;
     }
 
     .social-media-container{
+        margin-left: 120px;
         margin-right: 80px;
     }
+
+
 }  
